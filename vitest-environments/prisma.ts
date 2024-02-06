@@ -1,6 +1,6 @@
 import { Environment } from 'vitest'
 
-export default <Environment>{
+export default <Environment>(<unknown>{
   name: 'prisma',
   async setup() {
     console.log('Setup')
@@ -11,4 +11,4 @@ export default <Environment>{
       },
     }
   },
-}
+})
