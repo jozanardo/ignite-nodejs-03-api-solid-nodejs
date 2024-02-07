@@ -19,11 +19,13 @@ function generateDatabaseURL(schema: string) {
   return url.toString()
 }
 
-export default <Environment>(<unknown>{
+export default <Environment>{
   name: 'prisma',
   async setup() {
     const schema = randomUUID()
-    console.log(generateDatabaseURL(schema))
+    const databaseURL = generateDatabaseURL(schema)
+
+    process.env.DATABASE_URL = databaseURL
 
     execSync('npx prisma migrate deploy')
 
@@ -36,4 +38,4 @@ export default <Environment>(<unknown>{
       },
     }
   },
-})
+}
