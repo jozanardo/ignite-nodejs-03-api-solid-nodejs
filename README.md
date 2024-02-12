@@ -1,6 +1,6 @@
 # App
 
-GymPass style app. (Finished)
+GymPass style app. (Finished!!!)
 
 ## RFs (Requisitos funcionais)
 
